@@ -1,0 +1,48 @@
+@media (max-width:1024px){
+    .last{
+        .last__container{
+            gap:clamp(3.125rem, -14.5rem + 36.72vw, 9rem);
+        }
+        .last__left{
+           max-width:  clamp(20.313rem, 6.25rem + 29.3vw, 25rem);
+        }
+    }
+
+}
+@media (max-width:768px){
+    .last{
+        background-image: none;
+        .last__container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+        .last__left{
+            max-width: 100%;
+        }
+        .last__form{
+            width: 100%;
+        }
+        .last__left-title{
+            font-size: 30px;
+        }
+        .last__input{
+            text-align: left;
+        }
+    }
+}
+@media (max-width:480px){
+    .last{
+        .last__container{
+            padding-bottom: 40px;
+            padding-top: 40px;
+            gap: 40px;
+        }
+        .last__left{
+            gap:10px;
+        }
+    }
+}

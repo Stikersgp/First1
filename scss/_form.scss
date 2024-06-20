@@ -1,0 +1,62 @@
+.last{
+    background-color: rgb(213, 32, 39);
+    background-image: url('../images/procent.png');
+    background-position: 0 calc(100% + 20px);
+    background-repeat: repeat-x;
+    background-size: auto;
+    .last__container{
+        @extend %container;
+        padding-top: 87px;
+        padding-bottom: 87px;
+        display: flex;
+        gap: 144px;
+    }
+    .last__left{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        max-width: 400px;
+    }
+    .last__left-title{
+        @include titl(36px);
+    }
+    .last__left-text{
+        @include par(20px)
+    }
+    .last__form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-grow: 1;
+    }
+    .last__input{
+        padding: 20px;
+        flex-grow: 1;
+        border-radius: 5px;
+        background: rgb(246, 246, 246);
+        @include par(18px);
+        color:black;
+        max-height: 64px;
+    }
+    .last__input-submit{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 20px;
+        flex-grow: 1;
+        border-radius: 5px;
+        @include par(18px);
+        max-height: 64px;
+        border-radius: 5px;
+        background: rgb(20, 16, 36);
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            background:     white;
+            color: black;
+
+        }
+    }
+    
+}

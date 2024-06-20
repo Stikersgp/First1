@@ -1,0 +1,25 @@
+@media (max-width:1024px){
+    .footer{
+        .footer__logo{
+            font-size: 20px;
+        }
+        .footer__phone{
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width:480px){
+    .footer{
+        .footer__container{
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        .footer__one{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+    }
+}

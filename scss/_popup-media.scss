@@ -1,0 +1,163 @@
+@media (max-width:1024px){
+    .popup{
+        .popup__wrapper{
+            width: 90%;
+        }
+
+
+    }
+}
+@media (max-width:768px){
+    .popup{
+        .popup__text-container{
+            margin-top: 90px;
+        }
+        .popup__close{
+            display: none;
+        }
+        .button__close{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+        }
+        .button__close::before{
+            content: '';
+            position: absolute;
+            width: 0.2rem;
+            height: 100%;
+            background-color:rgb(20, 16, 36); 
+            transform: rotate(45deg);   
+        }
+        .button__close::after{
+            content: '';
+            position: absolute;
+            width: 0.2rem;
+            height: 100%;
+            background-color:rgb(20, 16, 36); 
+            transform: rotate(-45deg);   
+        }
+        .popup__up{
+            margin-bottom: 20px;
+        }
+        .popup__img{
+            width: 100%;
+            max-width: 160px;
+            height: auto;
+        }
+        .popup__select-choice{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+        }
+        .popup__this-choice{
+            @include par(20px);
+            color: white;            
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .popup__choice-a{
+            @include par(20px);
+            color: white;
+            background: rgb(213, 32, 39);
+            width: 100%;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            text-align: center;
+            border-top: 1px white solid ;
+            transition: 0.2s;
+            &:hover{
+                padding-top: 6px;
+                padding-bottom: 6px;
+                background: rgb(0, 0, 0);
+            }
+        }
+        .popup__choice{
+            display: none;
+        }
+        .popup__links{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0fr;
+            transition: 0.5s;
+            width: 100%;
+        }
+        .popup__links-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            min-height: 0px;
+        }
+        .popup__choice-container{
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            width: 100%;
+            background: rgb(213, 32, 39);
+            width: 100%;
+        }
+        .popup__arrow{
+            margin: auto 0;
+            transition: 0.5s;
+            &.active{
+                transform: rotate(180deg);
+            }
+        }
+        .choice__active{
+            grid-template-rows: 1fr;
+        }
+        .none{
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width : 480px){
+    .popup{
+        .popup__wrapper{
+            padding: 10px;
+        }
+        .popup__img{
+            width: 60px;
+            height: 88px;
+            border-radius: 8px;
+        }
+        .popup__title{
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .popup__up{
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .popup__up-right{
+            width: 100%;
+        }
+        .popup__up-text{
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .popup__up-icons{
+            gap: 5px;
+        }
+        .popup__this-choice{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+        .popup__choice-a{
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+        .popup__text{
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@media (max-width:1440px){
+    .buy{
+        .button{
+            padding: clamp(1.25rem, 0.481rem + 1.2vw, 1.563rem) clamp(1.875rem, -1.817rem + 5.77vw, 3.375rem);
+
+        }
+        .buy__button-second-title{
+            font-size: clamp(2.188rem, -0.12rem + 3.61vw, 3.125rem);
+        }
+    }
+}
+@media (max-width:1024px){
+    .buy__container{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        gap: 70px;
+    }
+}
+@media (max-width:950px){
+    .buy{
+        .buy__buttons{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .buy__button{
+            width: 40%;
+        }
+    }
+}
+@media (max-width:768px){
+}
+@media (max-width:768px){
+    .buy{
+        .buy__container{
+            padding-top: 60px;
+            padding-bottom: 60px;
+            gap: 60px;
+        }
+        .buy__title{
+            font-size: 30px;
+            text-align: center;
+        }
+        .buy__swiper-wrapper{
+            padding-bottom: 50px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+        }
+        .swiper-horizontal > .swiper-pagination-progressbar, .buy .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            width: 100%;
+        }
+        .buy__buttons{
+            flex-direction: column;
+            align-items: center;
+        }
+        .buy__button{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .buy__button-second-title{
+            font-size:50px;
+        }
+    }
+}
+@media (max-width:480px){
+    .buy{
+        .buy__button{
+            width: 100%;
+            &:hover{
+                & .buy__button-second-title{
+                    margin-top: 53px;
+                }
+            }
+        }
+        .buy__button-second-title{
+            font-size: clamp(2.188rem, -1.563rem + 18.75vw, 3.125rem);
+            margin-top: 40px;
+        }
+        .buy__container{
+            padding-top: 50px;
+            gap: 60px;
+        }
+        .buy__swiper-wrapper{
+            padding-bottom: 40px;
+        }
+        .buy__slider-wrapper{
+            gap: 40px;
+        }
+        .slide-image{
+            margin-bottom: 20px;
+        }
+        .slide-title{
+            font-size: 20px;
+        }
+        .slide-text{
+            font-size: 14px;
+        }
+        .slide-a{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .buy__button-text{
+            margin-top: 20px;
+        }
+        .button{
+            margin-top: 40px;
+        }
+}
+}

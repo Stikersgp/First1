@@ -1,0 +1,111 @@
+
+.synthesis__container{
+    @extend %container;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap:60px;
+    padding-bottom: 120px;
+    .synthesis__text{
+        @include par(30px);
+        max-width: 900px;
+        color:rgb(20, 16, 36);
+    }
+    span{
+        font-weight: bold;
+    }
+    .synthesis__blocks{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+    .synthesis__item{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .synthesis__item-titl{
+        @include titl(70px);
+        color: rgb(213, 32, 39);
+    }
+    .synthesis__item-par{
+        @include par(18px);
+        color: rgba(20, 16, 36, 0.7);
+    }
+}
+.gain{
+    background: rgb(249, 249, 249);;
+    .gain__container{
+        @extend %container;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        gap:60px;
+    }
+    .gain__title{
+        @include titl(50px);
+        color: rgb(20, 16, 36);
+    }
+    .gain__blocks{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .gain__item{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .gain__item-title{
+        @include titl(24px);
+        color: rgb(20, 16, 36);
+    }
+    .gain__item-text{
+        @include par(18px);
+        color: rgba(20, 16, 36, 0.7);
+    }
+    .gain__addition-block{
+        display: flex;
+        gap: 10px;
+        align-items: center
+    }
+    .gain__image-block{
+        cursor: pointer;
+        position: relative;
+        flex-grow: 1;
+        &::before{
+            opacity: 0;
+            @include par(16px);
+            color: rgb(20, 16, 36);
+            max-width: 251px;
+            position: absolute;
+            content: 'При наличии свободных мест';
+            top:-100px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 8px 0px rgba(20, 16, 36, 0.1);
+            background: rgb(255, 255, 255);
+            padding: 15px 20px;
+            -webkit-transition:
+                opacity 0.5s
+            ;
+        }
+        &:hover::before{
+            opacity: 1;
+        }
+
+    }
+    .gain__addition-circle{
+        background: rgba(20, 16, 36, 0.08);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    .gain__addition-i{
+        position: absolute;
+        left: 12px;
+        top:50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+
+}

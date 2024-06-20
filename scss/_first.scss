@@ -1,0 +1,161 @@
+.header{
+    background: rgb(20, 16, 36);
+    .header__container{
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1760px;
+        padding-top: 30px;
+        align-items: center;
+
+    }
+    .header__logo{
+        @include titl(30px);
+        font-weight : 700px;
+    }
+    .header__nav{
+        display: flex;
+        gap:40px;
+        &.active{
+            left:0%;
+            visibility: visible;
+        }
+    }
+    .header__nav-a{
+        @include par(20px); // 20
+        position: relative;
+        &::before{
+            content: '';
+            transition: 0.5s;
+            width: 0%;
+        }
+        &:hover::before{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: rgb(255, 255, 255);
+            bottom: 0;
+            left: 0;
+            
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            transition: 0.5s;
+            width: 0%;
+        }
+        &:hover::after{
+            width: 100%;
+            height: 2px;
+            top: 0;
+            right: 0;
+            background: rgb(255, 255, 255);
+        }
+    }
+    .header__phone{
+        @include titl(30px);
+        position : relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 3px;
+            transition: 0.5s;
+            background: white;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0%;
+            height: 3px;
+            transition: 0.5s;
+            background: white;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+    }
+    .header__phone-block{
+        background-image: url('../images/head__wrap.png');
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        order:1;
+        z-index: 51;
+        cursor: pointer;
+        &:hover{
+            .phone-image{
+                scale: 1.2;
+            }
+        }
+    }
+    .header__icons{
+        display: none;
+        gap: 10px;
+    }
+    .burger{
+        cursor: pointer;
+    }
+    .phone-image{
+        transition: 0.2s;
+    }
+
+}
+.main{}
+
+
+.first{
+    background: rgb(20, 16  , 36);
+    display: flex;
+    .first__container{
+        margin-left: calc((100% - 1240px) / 2);
+        padding: 0px 20px;
+        padding-top: 185px;
+        display: flex;
+        gap:70px;
+    }
+    .first__text-container{
+        max-width: 530px;
+        padding-top: 181px;
+    }
+    .first__titl{
+        @include titl(70px);
+        padding-bottom: 20px;
+    }
+    .first__par{
+        @include par(20px);
+        font-size: 20px;
+    }
+    .first__button{
+        @extend %button;
+        margin-top: 50px;
+        transition: 0.5s;
+        &:hover{
+            background: white;
+            color:  rgb(213, 32, 39);
+        
+        }
+    }
+    .first__img-container{
+        display: flex;
+        position: relative;
+        width: fit-content;
+        max-width: 783px;
+    }
+    .first-image{
+        width: 100%;
+        align-self: flex-end;
+    }
+    
+
+}
